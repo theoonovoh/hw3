@@ -1,0 +1,16 @@
+<h1>New Entry</h1>
+
+<form action="/places/<%= params[:place_id] %>/entries" method="post">
+  <p>
+    <label for="entry_title">Title</label>
+    <input type="text" name="entry[title]" id="entry_title">
+  </p>
+ 
+  <p>
+    <label for="entry_date">Date</label>
+    <input type="date" name="entry[date]" id="entry_date">
+  </p>
+  <input type="hidden" name="entry[place_id]" id="place_id" value="<%= params[:place_id] %>">
+  <button type="submit">Add Entry</button>
+</form>
+

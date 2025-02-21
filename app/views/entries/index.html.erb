@@ -1,0 +1,11 @@
+<h1>Entries for <%= @place %></h1>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <strong><%= entry.title %></strong>: <%= entry.description %> on <%= entry.date %>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/places/<%= @place.id %>/entries">View Entries</a>

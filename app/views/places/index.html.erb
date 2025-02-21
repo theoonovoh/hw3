@@ -1,0 +1,14 @@
+<h1>Places I've Been</h1>
+
+<ul style="list-style-type: none; padding: 0;">  <!-- Remove bullet points and padding -->
+  <% @places.each do |place| %>
+    <li style="margin-bottom: 15px;">  <!-- Add space between each item -->
+      <a href="/places/<%= place.id %>" style="text-decoration: underline; color: #007BFF;">
+        <%= place.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+
+<a href="/places/new" style="text-decoration: underline; color: #007BFF; margin-top: 30px; display: inline-block;">New Place</a>

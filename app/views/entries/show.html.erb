@@ -1,0 +1,16 @@
+<!-- Place details page -->
+
+<h1><%= @place["name"] %></h1>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <strong><%= entry["title"] %></strong> (<%= entry["date"] %>)<br>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Post</a>
+</p>
+
