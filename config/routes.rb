@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get("/places", { :controller => "places", :action => "index" })
   
   #new place form
-  get("/places/new", { :controller => "places", :action => "index" })
+  #get("/places/new", { :controller => "places", :action => "index" })
 
   #insert places into database
   post("/places", { :controller => "places", :action => "create" })
@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   get("/entries/new", { :controller => "entries", :action => "index" })
   post("/entries", { :controller => "entries", :action => "create" })
   get("/entries/:id", { :controller => "entries", :action => "show" })
-  end
+end
+
 end
